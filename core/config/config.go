@@ -1,7 +1,7 @@
 package config
 
 import (
-	"secure-me/source/config/module"
+	"manager/core/config/module"
 )
 
 var (
