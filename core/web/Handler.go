@@ -8,7 +8,7 @@ import (
 )
 
 // New will start a new web server instance
-func New() {
+func New() error {
 
 	// Initialize a brand new router
 	handler := mux.NewRouter()
@@ -20,5 +20,7 @@ func New() {
 
 	// Serve the HTTP server using TLS if it is enabled inside the configuration
 	server.ListenAndServe()
+
+	return nil
 
 }
