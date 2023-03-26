@@ -1,0 +1,11 @@
+[server]
+host = "localhost:30121"
+
+[security]
+tls = false
+certificate = "resources/security/server.cert"
+key = "resources/security/server.key"
+
+[assets]
+directory = "."
+served_in = "/resources/global/"
