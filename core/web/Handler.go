@@ -2,6 +2,7 @@ package web
 
 import (
 	"manager/core/config"
+	"manager/core/web/views"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -17,6 +18,8 @@ func New() error {
 		Addr:    config.Options.String("server", "host"),
 		Handler: handler,
 	}
+
+	handler.HandleFunc("/login", views.LandingPage)
 
 	// Serve the HTTP server using TLS if it is enabled inside the configuration
 	server.ListenAndServe()
